@@ -216,3 +216,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# Franka-Manipulation-RL project-specific ignores
+# ============================================================
+
+# Reinforcement-learning training outputs
+logs/
+*.pt
+
+# OS-generated files
+Thumbs.db
+.DS_Store
+
+
+# Franka-Manipulation-RL project-specific ignores
+logs/
+outputs/
+*.pt
+Thumbs.db
+.DS_Store
