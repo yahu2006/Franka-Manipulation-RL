@@ -1,4 +1,4 @@
-# Franka-Manipulation-RL
+<img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/d25abaed-2bbd-44fc-84e2-676eeb2cb628" /><img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/fc3391e1-fc64-4a77-ab28-a3a585adb31c" /># Franka-Manipulation-RL
 
 ## 项目简介
 
@@ -17,7 +17,9 @@
 机械臂完成完整的：
 
 **Reach → Grasp → Lift → Transport**
-![Uploading C10948B8F3A2DDE8CA19EA59F20B23B1.gif…]()
+
+<img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/7eef76a2-b477-4d5b-a3a1-491e5ce43431" />
+
 ### Baseline：Transport Drop Failure
 
 Baseline 策略能够完成 Lift，但部分策略会在后续 Transport 阶段发生物体掉落。
