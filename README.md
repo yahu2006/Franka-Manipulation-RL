@@ -17,8 +17,7 @@
 机械臂完成完整的：
 
 **Reach → Grasp → Lift → Transport**
-![alt text](C10948B8F3A2DDE8CA19EA59F20B23B1.gif)
-
+![Uploading C10948B8F3A2DDE8CA19EA59F20B23B1.gif…]()
 ### Baseline：Transport Drop Failure
 
 Baseline 策略能够完成 Lift，但部分策略会在后续 Transport 阶段发生物体掉落。
