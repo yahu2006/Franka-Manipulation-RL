@@ -28,17 +28,17 @@ class StagedRewardsCfg(LiftRewardsCfg):
     )
 
     # Stage 2: Grasp
-    grasping_object = RewTerm(
-        func=mdp.grasping_object,
+    grasp_alignment = RewTerm(
+        func=mdp.grasp_alignment_before_lift,
         params={
-            "distance_threshold": 0.08,
+            "std": 0.05,
             "minimal_height": 0.04,
             "robot_cfg": SceneEntityCfg(
                 "robot",
-                joint_names=["panda_finger.*"],
+                body_names=["panda_leftfinger", "panda_rightfinger"],
             ),
         },
-        weight=4.0,
+        weight=1.0,
     )
 
     # Stage 3: Lift

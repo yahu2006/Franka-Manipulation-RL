@@ -35,37 +35,36 @@ def reaching_before_lift(
 
     return not_lifted.float() * reach_reward
 
-
-def grasping_object(
+def grasp_alignment_before_lift(
     env: ManagerBasedRLEnv,
-    distance_threshold: float,
+    std: float,
     minimal_height: float,
     object_cfg: SceneEntityCfg = SceneEntityCfg("object"),
-    ee_frame_cfg: SceneEntityCfg = SceneEntityCfg("ee_frame"),
     robot_cfg: SceneEntityCfg = SceneEntityCfg(
-        "robot", joint_names=["panda_finger.*"]
+        "robot",
+        body_names=["panda_leftfinger", "panda_rightfinger"],
     ),
 ) -> torch.Tensor:
-    """Reward closing the gripper when the end effector is close to the object."""
+    """Reward both Franka fingers approaching the object before lifting."""
 
     object: RigidObject = env.scene[object_cfg.name]
     robot: Articulation = env.scene[robot_cfg.name]
-    ee_frame: FrameTransformer = env.scene[ee_frame_cfg.name]
 
     object_pos_w = object.data.root_pos_w
-    ee_pos_w = ee_frame.data.target_pos_w[..., 0, :]
 
-    distance = torch.linalg.norm(object_pos_w - ee_pos_w, dim=1)
+    # Shape: [num_envs, 2, 3]
+    finger_pos_w = robot.data.body_pos_w[:, robot_cfg.body_ids, :]
 
-    finger_pos = robot.data.joint_pos[:, robot_cfg.joint_ids]
-    mean_finger_pos = torch.mean(finger_pos, dim=1)
+    # Distance from each finger to the cube.
+    finger_dist = torch.linalg.norm(
+        finger_pos_w - object_pos_w.unsqueeze(1),
+        dim=-1,
+    )
 
-    # Franka finger joint:
-    # open ≈ 0.04 m
-    # closed ≈ 0.00 m
-    closure = 1.0 - torch.clamp(mean_finger_pos / 0.04, 0.0, 1.0)
+    mean_finger_dist = torch.mean(finger_dist, dim=1)
 
-    near_object = distance < distance_threshold
+    alignment_reward = 1.0 - torch.tanh(mean_finger_dist / std)
+
     not_lifted = object_pos_w[:, 2] <= minimal_height
 
-    return near_object.float() * not_lifted.float() * closure
+    return not_lifted.float() * alignment_reward
