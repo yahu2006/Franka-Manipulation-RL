@@ -278,20 +278,7 @@ def main(
     # Wrapper resets the environment during construction.
     obs = env.get_observations()
 
-    initial_object_z = object_asset.data.root_pos_w[:, 2]
-
-    print(
-        f"[DEBUG] Initial object z: "
-        f"min={initial_object_z.min().item():.4f} m, "
-        f"max={initial_object_z.max().item():.4f} m, "
-        f"mean={initial_object_z.mean().item():.4f} m"
-    )
-
-    print(
-        f"[DEBUG] Lift threshold: "
-        f"{args_cli.lift_threshold:.4f} m"
-    )
-
+   
     # -------------------------------------------------------------------------
     # Evaluation loop
     # -------------------------------------------------------------------------
@@ -330,12 +317,12 @@ def main(
             object_pos_w[:, 2]
             - base_env.scene.env_origins[:, 2]
         )
-        
+
         # Default object height in the local environment frame.
         initial_object_z_local = (
             object_asset.data.default_root_state[:, 2]
         )
-        
+
         # Lift means the object has actually moved upward by the required amount.
         lifted = (
             object_z_local

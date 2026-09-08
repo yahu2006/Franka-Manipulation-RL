@@ -1,0 +1,50 @@
+===== model_50.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 0.00%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.4094 m
+===== model_100.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 0.00%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.4039 m
+===== model_150.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 0.78%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.4439 m
+===== model_200.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 5.47%
+Drop Rate                 : 1.56%
+Mean Final Position Error : 0.4449 m
+===== model_250.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 7.81%
+Drop Rate                 : 0.78%
+Mean Final Position Error : 0.3727 m
+===== model_300.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 8.59%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.1755 m
+===== model_350.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 34.38%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.1601 m
+===== model_400.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 30.47%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.1163 m
+===== model_450.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 40.62%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.1011 m
+===== model_499.pt ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 41.41%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.0908 m

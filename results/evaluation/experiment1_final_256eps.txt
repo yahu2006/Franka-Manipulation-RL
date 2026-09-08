@@ -1,0 +1,36 @@
+===== Baseline seed42 ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 38.67%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.0905 m
+Std Final Position Error  : 0.0339 m
+===== Baseline seed43 ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 35.55%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.0802 m
+Std Final Position Error  : 0.0331 m
+===== Baseline seed44 ===== 
+Lift Success Rate         : 95.70%
+Goal Success Rate         : 2.73%
+Drop Rate                 : 44.14%
+Mean Final Position Error : 0.6833 m
+Std Final Position Error  : 0.2722 m
+===== Staged v3 seed42 ===== 
+Lift Success Rate         : 91.80%
+Goal Success Rate         : 18.36%
+Drop Rate                 : 1.56%
+Mean Final Position Error : 0.2459 m
+Std Final Position Error  : 0.1521 m
+===== Staged v3 seed43 ===== 
+Lift Success Rate         : 63.67%
+Goal Success Rate         : 12.11%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.2452 m
+Std Final Position Error  : 0.1753 m
+===== Staged v3 seed44 ===== 
+Lift Success Rate         : 100.00%
+Goal Success Rate         : 61.72%
+Drop Rate                 : 0.00%
+Mean Final Position Error : 0.0731 m
+Std Final Position Error  : 0.0271 m
