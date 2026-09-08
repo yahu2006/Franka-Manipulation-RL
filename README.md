@@ -1,5 +1,3 @@
-<img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/d25abaed-2bbd-44fc-84e2-676eeb2cb628" /><img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/fc3391e1-fc64-4a77-ab28-a3a585adb31c" /># Franka-Manipulation-RL
-
 ## 项目简介
 
 本项目基于 **Isaac Lab + RSL-RL + PPO**，将此前四足机器人 Locomotion 强化学习经验进一步迁移到 **Franka Panda Manipulation**，完成：
