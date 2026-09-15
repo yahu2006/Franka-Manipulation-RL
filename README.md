@@ -1,5 +1,3 @@
-# Franka-Manipulation-RL
-
 ## 项目简介
 
 本项目基于 **Isaac Lab + RSL-RL + PPO**，将此前四足机器人 Locomotion 强化学习经验进一步迁移到 **Franka Panda Manipulation**，完成：
@@ -17,7 +15,8 @@
 机械臂完成完整的：
 
 **Reach → Grasp → Lift → Transport**
-![alt text](C10948B8F3A2DDE8CA19EA59F20B23B1.gif)
+
+<img width="1280" height="824" alt="C10948B8F3A2DDE8CA19EA59F20B23B1" src="https://github.com/user-attachments/assets/7eef76a2-b477-4d5b-a3a1-491e5ce43431" />
 
 ### Baseline：Transport Drop Failure
 
